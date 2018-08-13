@@ -1,3 +1,18 @@
 {
-    "extends": "airbnb"
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "jest"
+  ],
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "react/prefer-stateless-function": ["error", "never"]
+  }
 }

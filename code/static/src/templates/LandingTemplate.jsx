@@ -1,18 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
-import LandingNav from '../molecules/LandingNav';
+import axios from 'axios';
+import LoginForm from '../molecules/LoginForm';
+import Colors from '../styles/colors';
 
 const LandingPageWrapper = styled.div`
   height: 100%;
   width: 100%;
-  background: url('https://images.unsplash.com/photo-1521139802262-a3c85ac7faa2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8156a7648263cc29f4f7ae533c3da5c3&auto=format&fit=crop&w=1674&q=80') no-repeat top center fixed;
-  background-size: cover;
+  background-color: ${Colors.green};
+  color: ${Colors.white};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default function LandingTemplate() {
+  axios.post('/auth', {
+    username: 'hscottharrison',
+    password: 'Password123'
+  }).then(response => console.log(response))
   return (
     <LandingPageWrapper>
-      <LandingNav />
+      <h2>ForeGo</h2>
+      <LoginForm />
     </LandingPageWrapper>
   );
 }

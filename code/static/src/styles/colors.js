@@ -5,4 +5,5 @@ export default {
   lightBrown: '#bf9a54',
   darkBrown: '#553c1e',
   black: '#000',
+  white: '#fff'
 };
